@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# jaguar-lang.org
+
+Source code for the https://jaguar-lang.org website.
+
+***
+
+This project was bootstrapped with [create-react-app](https://github.com/facebookincubator/create-react-app). Some of it may only be applicable to create-react-app itself, not this project.
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
