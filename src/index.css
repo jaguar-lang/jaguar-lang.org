@@ -1,8 +1,8 @@
 html {
-  background-color: #6d15ae;
+  background-color: #7915ac;
   color: #fff;
-  font-family: "Proxima Nova";
-  line-height: 1.1;
+  font-family: "Proxima Nova", Arial;
+  min-width: 800px;
 }
 
 body {

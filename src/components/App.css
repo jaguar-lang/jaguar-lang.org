@@ -34,7 +34,6 @@ main a {
 }
 
 nav {
-  border-top: 2px solid #fff;
   background-color: #fff;
   box-shadow: 0px 3px 0px 0px #4f1c870d, 0px 1px 1px 0px #4f1c870d;
   position: fixed;
@@ -42,17 +41,27 @@ nav {
   top: 0;
   right: 0;
   z-index: 1;
-  transition: border-top-color 200ms linear;
+  min-width: 800px;
 }
 
-.home-page nav {
-  border-top: 2px solid #6416b0;
-  border-image: linear-gradient(144deg, #6416b0, #dd0699) 10;
+nav::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #fff;
+  background-image: none;
+  transition: background-color 200ms linear, background-image 200ms linear;
+}
+
+.home-page nav::before {
+  background-color: #6416b0;
+  background-image: linear-gradient(144deg, #6416b0, #dd0699);
 }
 
 nav .nav-gutter {
   display: flex;
-  max-width: 1170px;
+  max-width: 1156px;
+  padding: 0 14px;
   margin: 0 auto;
   align-items: center;
 }
@@ -108,46 +117,52 @@ nav ul li.active a:after {
 }
 
 header {
-  background: linear-gradient(144deg, #6416b0, #dd0699);
+  background-image: linear-gradient(144deg, #6416b0, #dd0699);
   box-shadow: inset 0px 0px 24px #ff00b133, inset 6px 10px 60px #6416b052;
-  padding: 100px;
   padding-top: 169px;
+  padding-bottom: 100px;
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
 
-header h1 {
-  font-size: 25px;
-  margin: 0;
-  margin-bottom: 40px;
-  color: #fff;
+header .tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-header h1 span:first-child {
+header .tagline div:first-child {
+  font-weight: bold;
   opacity: 0.7;
+  color: #fff;
+  font-size: 25px;
 }
 
-header h1 span:last-child {
+header .tagline div:last-child {
+  font-weight: bold;
+  background: none;
+  padding: 0 3px;
+  padding-top: 5px;
+  z-index: 0;
+  position: relative;
   font-size: 46px;
+  color: #6416b01f;
+  margin-bottom: 40px;
+}
+
+header .tagline div:last-child::after {
+  content: "Reactive Programming Language";
+  position: absolute;
+  left: 0;
+  top: 0;
   background-image: linear-gradient(180deg, #fff 40%, #ffe9f6 60%);
   color: #fff;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  position: relative;
-  padding: 0 1px;
-  z-index: 0;
-}
-
-header h1 span:last-child:before {
-  background: none;
-  content: "Reactive Programming Languuge";
-  left: 0;
-  position: absolute;
-  text-shadow: 1px 5px 0px #6416b01f;
-  top: 0;
-  z-index: -1;
+  padding: 0 3px;
+  z-index: 1;
 }
 
 .install-button {
@@ -157,17 +172,35 @@ header h1 span:last-child:before {
   background-image: linear-gradient(180deg, #fff 40%, #fff3fa 60%);
   display: inline-block;
   font-size: 26px;
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", Arial;
   font-weight: bold;
   border: none;
   border-radius: 3px;
   padding: 22px 40px;
-  box-shadow: 1px 5px 0px #6416b01f, 0px 2px 0px 2px #6416b0;
+  box-shadow: 0px 2px 0px 2px #6416b0;
   margin-bottom: 4px;
+  position: relative;
+  overflow: hidden;
 }
 
 footer {
   padding: 23px 0;
   text-align: center;
   font-size: 12px;
+}
+
+.button.primary {
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px 16px;
+  box-shadow: 0px 3px 0px #f6edff;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #b23bf0;
+  background-image: linear-gradient(172deg, #c9099c, #b23bf0);
+}
+
+.button.medium {
+  padding: 12px 20px;
+  font-size: 20px;
 }

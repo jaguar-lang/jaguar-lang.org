@@ -58,18 +58,17 @@ class App extends Component {
             </div>
           </nav>
           <header>
-            <h1>
-              <span>Jaguar is a</span>
-              <br />
-              <span>
+            <div className="tagline">
+              <div>
+                Jaguar is a
+              </div>
+              <div>
                 Reactive Programming Language
-              </span>
-            </h1>
+              </div>
+            </div>
             <a
               className="install-button"
               href={surveyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Get Notified When Its Available
             </a>
@@ -78,21 +77,30 @@ class App extends Component {
             <div>
               <img src={logo} width={300} alt="Jaguar logo" />
             </div>
-            <div style={{ maxWidth: 438, margin: '0 auto', textAlign: 'justify' }}>
+            <div style={{ maxWidth: 466, margin: '0 auto', textAlign: 'justify' }}>
               <p>
-                You're here early! <b>Jaguar</b> is already 2+ years in the making,
-                but many more are ahead before it's production ready. If
-                you're interested in trying out pre-alpha releases or even
-                contributing, <a href={surveyUrl} target="_blank" rel="noopener noreferrer">sign up to be notified</a>.
+                You're here early! <b>Jaguar</b> is already 2+ years in the
+                making, and there may be many more ahead before it's production
+                ready. You can <a href={surveyUrl}>sign up to be notified</a> when
+                the first pre-alpha releases come out.
               </p>
               <p>
-                More information to come.
+                Jaguar is currently developed solely by <a href="https://twitter.com/_jayphelps">Jay Phelps</a> in
+                his free time. He'd love to dedicate much more time so things
+                progressed quicker and other early-stage contributors had additional
+                incentive. If this is interests you, or you appreciate Jay's other
+                OSS contributions, consider <a href="https://www.patreon.com/jayphelps">becoming a Backer on Patreon</a>.
+              </p>
+              <p style={{ textAlign: 'center', marginTop: 36 }}>
+                <a className="primary medium button" href="https://www.patreon.com/jayphelps">
+                  Become a Backer
+                </a>
               </p>
             </div>
           </div>
         </main>
         <footer>
-          &copy; {copyright} <a href="https://twitter.com/_jayphelps" target="_blank" rel="noopener noreferrer">Jay Phelps</a>
+          &copy; {copyright} <a href="https://twitter.com/_jayphelps">Jay Phelps</a>
         </footer>
       </div>
     );
