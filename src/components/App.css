@@ -172,7 +172,7 @@ header .tagline div:last-child::after {
   background-image: linear-gradient(180deg, #fff 40%, #fff3fa 60%);
   display: inline-block;
   font-size: 26px;
-  font-family: "Proxima Nova", Arial;
+  font-family: "Fira Sans", sans-serif;
   font-weight: bold;
   border: none;
   border-radius: 3px;
