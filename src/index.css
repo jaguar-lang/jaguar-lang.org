@@ -1,5 +1,36 @@
+html {
+  background-color: #6d15ae;
+  color: #fff;
+  font-family: "Proxima Nova";
+  line-height: 1.1;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+}
+
+@keyframes focus-outline-pulse {
+  from {
+    outline-width: 7px;
+  }
+
+  to {
+    outline-width: 12px;
+  }
+}
+
+:focus {
+  outline: #a03fff auto 7px;
+  outline-offset: -3px;
+  animation-duration: 800ms;
+  animation-name: focus-outline-pulse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
