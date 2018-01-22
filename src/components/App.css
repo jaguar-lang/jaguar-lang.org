@@ -196,8 +196,8 @@ footer {
   box-shadow: 0px 3px 0px #f6edff;
   text-decoration: none;
   font-size: 16px;
-  background-color: #b23bf0;
-  background-image: linear-gradient(172deg, #c9099c, #b23bf0);
+  background-color: #9b14d2;
+  background-image: linear-gradient(-8deg, #df00ff 0%, #8a16c6 67%, #a800ff 100%);
 }
 
 .button.medium {
