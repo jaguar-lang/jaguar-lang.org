@@ -70,7 +70,7 @@ class App extends Component {
               className="install-button"
               href={surveyUrl}
             >
-              Get Notified When Its Available
+              Get Notified When It's Available
             </a>
           </header>
           <div style={{ padding: 100, textAlign: 'center' }}>
